@@ -15,11 +15,22 @@
 html {
   font-size: 10px;
   overflow-x: hidden;
+  min-width: 368px;
 }
 
 body {
   font-family: "Poppins", sans-serif;
   color: var(--txt-color);
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+	width: 7px;
+}
+
+body::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background: #d7dad5
 }
 
 a {
@@ -153,5 +164,41 @@ main .social {
     display: block;
     filter: invert(100%);
     cursor: pointer;
+  }
+  main .product {
+    height: 300px;
+  }
+  main .social {
+    transform: scale(0.8);
+  }
+}
+
+@media only screen and (width <= 555px) {
+  header .logo {
+    height: 60px;
+    margin-top: 10px;
+  }
+  header .menu-img {
+    height: 20px;
+  }
+  main {
+    margin: 0 60px 0 20px;
+  }
+  .about .title {
+    font-size: 7rem;
+  }
+  .about .description {
+    font-size: 1.5rem;
+  }
+  main .thumbnails {
+    gap: 0;
+    height: 90px;
+  }
+  .thumbnails img {
+    object-fit: contain;
+  }
+  main .social {
+    padding: 10px;
+    transform: scale(0.6);
   }
 }
